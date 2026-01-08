@@ -1,3 +1,34 @@
+/* ================= AUTH THEME TOGGLE ================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("darkToggle");
+
+  if (!toggle) return;
+
+  // Initial state
+  const isDark = localStorage.getItem("darkMode") === "on";
+  document.body.classList.toggle("dark", isDark);
+
+  toggle.innerHTML = isDark
+    ? '<i data-lucide="sun"></i>'
+    : '<i data-lucide="moon"></i>';
+
+  lucide.createIcons();
+
+  toggle.onclick = () => {
+    document.body.classList.toggle("dark");
+
+    const nowDark = document.body.classList.contains("dark");
+    localStorage.setItem("darkMode", nowDark ? "on" : "off");
+
+    toggle.innerHTML = nowDark
+      ? '<i data-lucide="sun"></i>'
+      : '<i data-lucide="moon"></i>';
+
+    lucide.createIcons();
+  };
+});
+
 function togglePassword(id) {
   const input = document.getElementById(id);
   input.type = input.type === "password" ? "text" : "password";
@@ -86,3 +117,5 @@ function resetPassword() {
   localStorage.setItem("gumasto_logged_in", "true");
   window.location.href = "../dashboard.html";
 }
+
+

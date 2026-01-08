@@ -132,7 +132,7 @@ body {
 
 /* ================= ERROR STATES ================= */
 .input-error {
-  border-color: #ef4444 !important;
+  border-color: #f22d2d !important;
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
 }
 
@@ -191,7 +191,7 @@ button.primary {
     filter 0.25s ease;
 }
 
-/* 🔥 FLOAT ON HOVER (RESTORED) */
+/* 🔥 FLOAT ON HOVER */
 button.primary:hover:not(:disabled) {
   transform: translateY(-3px);
   box-shadow: 0 14px 36px rgba(124, 58, 237, 0.35);
@@ -297,4 +297,124 @@ button.secondary:hover {
   font-style: italic;
   font-weight: 400;
   opacity: 0.95;
+}
+
+/* Auth pages theme toggle button */
+.theme-btn {
+  position: fixed;
+  top: 16px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(14px);
+  border: none;
+  cursor: pointer;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.theme-btn i {
+  color: #1e293b; /* dark icon for light mode */
+}
+
+
+.theme-btn:hover {
+  transform: scale(1.1);
+}
+
+body.dark .theme-btn i {
+  color: #020617; /* sun visible on light button */
+}
+
+body.dark .theme-btn {
+  background: rgba(215, 206, 206, 0.9);
+}
+
+/* ================= AUTH DARK MODE ================= */
+
+
+/* Headings */
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+  color: #f8fafc;
+}
+
+/* Links */
+body.dark a {
+  color: #77b3f7;
+}
+
+/* Buttons (login / submit) */
+body.dark button.primary,
+body.dark .primary-btn {
+  background: linear-gradient(135deg,#38bdf8,#2563eb);
+  color: white;
+
+}
+
+
+body.dark .secondary-text,
+body.dark p {
+  color: #cbd5f5;
+}
+
+
+/* Page background */
+body.dark {
+  background: linear-gradient(15deg, #140953, #240242e6);
+}
+
+/* MAIN AUTH CARD stays dark-ish */
+body.dark .auth-container {
+  background: rgba(15, 23, 42, 0.92);
+}
+
+/* LEFT FORM PANEL  */
+body.dark .auth-form {
+  background: #b7c8e9;
+}
+
+/* Headings inside left panel */
+body.dark .auth-form h2 {
+  color: #0f172a;
+}
+
+/* Subtitles & labels */
+body.dark .auth-form .subtitle,
+body.dark .auth-form label,
+body.dark .auth-form p {
+  color: #283443;
+}
+
+/* INPUTS  */
+body.dark .auth-form input {
+  background: #eef0f5;
+  color: #0f172a;
+  border: 1px solid #979eb7;
+}
+
+body.dark .auth-form input::placeholder {
+  color: #64748b;
+}
+
+/* Input focus */
+body.dark .auth-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Links inside form */
+body.dark .auth-form a {
+  color: #2563eb;
+}
+
+/* Error text */
+body.dark .auth-form .error-text {
+  color: #e91b1b;
 }
