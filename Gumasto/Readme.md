@@ -126,7 +126,7 @@ Max file size: **500MB**
 
 ## 🛠 Tech Stack
 
-Frontend: HTML, CSS, JavaScript, React, Next.js, TypeScript  
+Frontend: HTML, CSS, JavaScript, Bootstrap 
 Backend: Node.js, Express  
 AI / ML: Python
 Database: MongoDB  
