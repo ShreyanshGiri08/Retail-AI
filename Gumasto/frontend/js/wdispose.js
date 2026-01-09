@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
   new Chart(ctx, {
     type: "bar",
     data: {
-      labels: ["Milk", "Bread", "Fruit Juice", "Rice Pack"],
+      labels: ["Dairy", "Bakery", "Beverages", "Grains"],
       datasets: [{
         label: "Dispose Qty",
         data: [24, 18, 30, 60],

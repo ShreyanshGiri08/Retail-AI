@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
   const ctx = document.getElementById("saleChart").getContext("2d");
 
-  const labels = ["Headphones", "Olive Oil", "Chair Set", "T-Shirt Pack"];
+  const labels= ["Electronics", "Groceries", "Furniture", "Clothing"];
   const data = [20, 15, 10, 25];
 
   const colors = [
